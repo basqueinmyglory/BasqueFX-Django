@@ -23,7 +23,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="{% static 'forecasts/Bull.jpg' %}" style="width:100%" class="w3-circle">
-  <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="{% url 'home' %}#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -35,7 +35,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa fa-binoculars w3-xxlarge"></i>
     <p>FORECAST</p>
   </a>
-  <a href="{% url 'tools' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="{% url 'tools' %}#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-area-chart w3-xxlarge"></i>
     <p>TOOLS</p>
   </a>
@@ -55,19 +55,61 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     
   </header>
 
-<!-- Blog Section -->
-{% for post in blogpost %}
-<div class="w3-content w3-justify w3-text-grey w3-padding-36" id="about">
-    <h2 class="w3-text-light-grey">{{post.title}}  - {{post.entry_date}} </h2>
-    <hr style="width:200px; margin:10px 0; " class="w3-opacity">
-    <p style="font-family: 'Playball', cursive;"> {{post.author}} </p>
-    <p>
-       {{post.content|linebreaks}}
-    </p>
-    <hr style="width:600px; margin-bottom: 50px;" class="w3-opacity">
+<!-- Tools Section -->
+<!-- News Headlines - Forex DrudgeReport -->
+<div class="w3-padding-64 w3-content" id="photos">
+  <h2 class="w3-text-light-grey">News Headlines</h2>
+  <hr style="width:200px" class="w3-opacity">
+
+    <table border="1" class="dataframe">
+    <thead>
+    <tr style="text-align: right;">
+      <th>Currency</th>
+      <th>Event</th>
+      <th>Impact</th>
+      <th>Time_Eastern</th>
+      <th>Forecast</th>
+      <th>Previous</th>
+    </tr>
+  </thead>
+ 
+   <tbody>
+     
+    <tr>
+      <td>cell.Currency</td>
+      <td>cell.Event</td>
+      <td>cell.Impact</td>
+      <td>cell.Time_Eastern</td>
+      <td>cell.Forecast</td>
+      <td>cell.Previous</td>
+    </tr>
+    
+
+  </table>
 </div>
-{% endfor %}
-<!-- END PAGE CONTENT -->
+
+
+<!-- Strength Indicator Section -->
+<div class="w3-padding-64 w3-content" id="photos">
+  <h2 class="w3-text-light-grey">Strength Indicator</h2>
+  <hr style="width:200px" class="w3-opacity">
+
+</div>
+
+<!-- Resources Section -->
+<div class="w3-padding-64 w3-content" id="photos">
+  <h2 class="w3-text-light-grey">Resources</h2>
+  <hr style="width:200px" class="w3-opacity">
+<a href="https://www.investing.com/economic-calendar/" style="text-decoration: none;">Economic Calendar</a>
+</br>
+<a href="https://www.tradingview.com/" style="text-decoration: none;">Charts (Trading View)</a>
+</br>
+<a href="https://www.oanda.com/forex-trading/analysis/currency-volatility" style="text-decoration: none;">Currency Volitility Charts (Oanda)</a>
+</br>
+<a href="https://www.bloomberg.com/markets/stocks" style="text-decoration: none;">Bloomberg Equities</a>
+</div>
+
+</div>
 </div>
 
 </body>

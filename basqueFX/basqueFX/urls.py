@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', forecasts.views.home, name="home"),
     url(r'^blog/', blog.views.blog, name="blog"),
-    #url(r'^tools/', blog.views.home),
+    url(r'^tools/', forecasts.views.tools, name="tools"),
 
 ]

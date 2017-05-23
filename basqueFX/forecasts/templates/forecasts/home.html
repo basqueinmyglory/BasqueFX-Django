@@ -23,19 +23,19 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
   <img src="{% static 'forecasts/Bull.jpg' %}" style="width:100%" class="w3-circle">
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="{% url 'home' %}#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="{% url 'home' %}#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="#forecast" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="{% url 'home' %}#forecast" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-binoculars w3-xxlarge"></i>
     <p>FORECAST</p>
   </a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="{% url 'tools' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-area-chart w3-xxlarge"></i>
     <p>TOOLS</p>
   </a>
@@ -84,7 +84,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <divstyle="width:100%;" id="forecast">
       {% for post in dailyforecast %}
     <div class="" style="float:left; width: 60%;">
-      <h2 class="w3-text-light-grey">Daily Forecast: {{ post.pub_date }} </h2>
+      <h2 class="w3-text-light-grey">Daily Forecast: {{ post.entry_date }} </h2>
       <hr style="width:200px;" class="w3-opacity">
 
       <p class="w3-wide" style="font-weight: bold; color: white;">Strong Currency: {{ post.strong_cur }}</p>

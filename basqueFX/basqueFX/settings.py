@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'basqueFX.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd60uuffk20up1i',
+        'USER': 'wfmnyfwdodwjvj',
+        'PASSWORD': '49cb5d80d43011be38a957cf42bc0340bb454552a0ad1274a988d99fc31f4170',
+        'HOST': 'ec2-54-225-119-223.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
