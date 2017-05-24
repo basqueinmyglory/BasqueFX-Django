@@ -1,0 +1,16 @@
+Vultr Info
+
+Username: django
+Password: Hillsdal12e
+
+CREATE DATABASE forexdb;
+CREATE USER myprojectuser WITH PASSWORD 'password';
+
+basquefx$ virtualenv fxenv
+
+superuser: basquefx
+password: Hillsdal12e
+
+SQL:
+
+CREATE TABLE Blogpost(entry_date)
