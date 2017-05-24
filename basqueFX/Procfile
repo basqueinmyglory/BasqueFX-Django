@@ -1,2 +1,2 @@
-web: gunicorn basquefx.wsgi --log-file -
+web: gunicorn BasqueFX-Django.wsgi --log-file -
 worker: python forexcal.py
