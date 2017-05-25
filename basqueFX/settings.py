@@ -25,7 +25,7 @@ SECRET_KEY = '@%5)vdxh86=2#z)be+#ltyt%1t*!qb=z4=+8ah0505l^(u=m!1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['45.32.201.223']
+ALLOWED_HOSTS = ['45.32.201.223', 'basquefx.com', '127.0.0.1']
 
 
 # Application definition
@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'basqueFX.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd60uuffk20up1i',
-        'USER': 'wfmnyfwdodwjvj',
-        'PASSWORD': '49cb5d80d43011be38a957cf42bc0340bb454552a0ad1274a988d99fc31f4170',
-        'HOST': 'ec2-54-225-119-223.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'NAME': 'forexdb',
+        'USER': 'myprojectuser',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
