@@ -10,3 +10,6 @@ class Blogpost(models.Model):
 
     def __str__(self):
         return str(self.pub_date) + " | " + str(self.title) 
+
+    def summary(self):
+        return self.notes[:250]

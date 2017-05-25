@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^$', forecasts.views.home, name="home"),
     url(r'^blog/', blog.views.blog, name="blog"),
     url(r'^tools/', forecasts.views.tools, name="tools"),
+    url(r'^post/(?P<blog_id>[0-9]+)/$', blog.views.blogpost, name="blogpost"),
 
 ]

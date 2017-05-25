@@ -56,17 +56,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </header>
 
 <!-- Blog Section -->
-{% for post in blogpost %}
 <div class="w3-content w3-justify w3-text-grey w3-padding-36" id="about">
-    <h2 class="w3-text-light-grey"><a href="{% url 'blogpost' post.id %}" >{{post.title}}  - {{post.pub_date}} </a></h2>
+    <h2 class="w3-text-light-grey">{{blogpost.title}}  - {{blogpost.pub_date}} </h2>
     <hr style="width:200px; margin:10px 0; " class="w3-opacity">
-    <p style="font-family: 'Playball', cursive;"> {{post.author}} </p>
+    <p style="font-family: 'Playball', cursive;"> {{blogpost.author}} </p>
     <p>
-       {{post.summary|linebreaks}}
+       {{blogpost.notes|linebreaks}}
     </p>
     <hr style="width:600px; margin-bottom: 50px;" class="w3-opacity">
 </div>
-{% endfor %}
 <!-- END PAGE CONTENT -->
 </div>
 

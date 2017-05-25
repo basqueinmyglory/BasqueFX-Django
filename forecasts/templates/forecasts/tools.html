@@ -102,16 +102,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </thead>
  
    <tbody>
-     
+     {% for event in dailyevents %}
     <tr>
-      <td>cell.Currency</td>
-      <td>cell.Event</td>
-      <td>cell.Impact</td>
-      <td>cell.Time_Eastern</td>
-      <td>cell.Forecast</td>
-      <td>cell.Previous</td>
+      <td>{{ event.currency }}</td>
+      <td>{{ event.event }}</td>
+      <td>{{ event.impact }}</td>
+      <td>{{ event.time_eastern }}</td>
+      <td>{{ event.forecast }}</td>
+      <td>{{ event.previous }}</td>
     </tr>
-    
+    {% endfor %}
 
   </table>
 </div>

@@ -29,3 +29,11 @@ class Dailyforecast(models.Model):
     def __str__(self):
         return str(self.entry_date) + " | Strong: " + str(self.strong_cur) + " | Weak: " + str(self.weak_cur)
 
+class Calevents(models.Model):
+    date = models.DateTimeField(max_length=500)  # Field name made lowercase.
+    currency = models.CharField(max_length=50)  # Field name made lowercase.
+    event = models.CharField(max_length=50)  # Field name made lowercase.
+    impact = models.CharField(max_length=50)  # Field name made lowercase.
+    time_eastern = models.CharField(max_length=50)  # Field name made lowercase.
+    forecast = models.CharField(max_length=50)  # Field name made lowercase.
+    previous = models.CharField(max_length=50)  # Field name made lowercase.
