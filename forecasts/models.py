@@ -10,6 +10,7 @@ class Dailyforecast(models.Model):
     CAD = 'CAD'
     AUD = 'AUD'
     NZD = 'NZD'
+    No_Option = '---'
     CURRENCY_OPTIONS = (
         (USD, 'USD'),
         (GBP, 'GBP'),
@@ -18,6 +19,7 @@ class Dailyforecast(models.Model):
         (CAD, 'CAD'),
         (AUD, 'AUD'),
         (NZD, 'NZD'),
+        (No_Option, '---'),
     )
     entry_date = models.DateTimeField(max_length=500)
     strong_cur = models.CharField(max_length=3, choices=CURRENCY_OPTIONS, default=USD)
