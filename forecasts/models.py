@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -23,10 +24,10 @@ class Dailyforecast(models.Model):
     )
     entry_date = models.DateTimeField(max_length=500)
     strong_cur = models.CharField(max_length=3, choices=CURRENCY_OPTIONS, default=USD)
-    strong_reason = models.TextField(max_length=500)
+    strong_reason = RichTextField()
     weak_cur = models.CharField(max_length=3, choices=CURRENCY_OPTIONS, default=USD)
-    weak_reason = models.TextField(max_length=500)
-    notes = models.TextField(max_length=500)
+    weak_reason = RichTextField()
+    notes = RichTextField()
     
     def __str__(self):
         return str(self.entry_date) + " | Strong: " + str(self.strong_cur) + " | Weak: " + str(self.weak_cur)

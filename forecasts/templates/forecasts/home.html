@@ -1,115 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     {% load static %}
 <head>
 
-<title>Basque FX</title>
-<link rel="shortcut icon" href="{% static 'forecasts/favicon.ico' %}" type="image/x-icon">
-<link rel="icon" href="{% static 'forecasts/favicon.ico' %}" type="image/x-icon">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{% static 'forecasts/style/w3.css' %}">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=UnifrakturCook:700">
-<link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Playball">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <title>Basque FX</title>
 
-  ga('create', 'UA-100005517-1', 'auto');
-  ga('send', 'pageview');
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'forecasts/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-</script>
+    <!-- Custom Fonts -->
+    <link href="{% static 'forecasts/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Playball">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="{% static 'forecasts/style/grayscale.min.css' %}" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-</style>
-<body class="w3-black">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <img src="{% static 'forecasts/Bull.jpg' %}" style="width:100%" class="w3-circle">
-  <a href="{% url 'home' %}#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="{% url 'home' %}#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="{% url 'tools' %}#forecast" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-binoculars w3-xxlarge"></i>
-    <p>FORECAST</p>
-  </a>
-  <a href="{% url 'tools' %}#tools" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-area-chart w3-xxlarge"></i>
-    <p>TOOLS</p>
-  </a>
-  <a href="{% url 'blog' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-book w3-xxlarge"></i>
-    <p>BLOG</p>
-  </a>
-</nav>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class=""></i> Basque<span style="font-family: 'Playball'">FX</span>
+                </a>
+            </div>
 
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo" style="font-family: 'Playball', cursive;"><span class="w3-hide-small" ></span> Basque FX</h1>
-    <p style="font-family: 'Playball', cursive;">A Forex Forecasting Journal</p>
-    
-  </header>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'tools' %}">Tools</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-<div class="w3-content w3-justify w3-text-grey w3-padding-36">
-  <img src="{% static 'forecasts/Burgos.jpg' %}" alt="boy" class="w3-image w3-container w3-padding-32 w3-center w3-black" width="992" height="1108">
-</div>
-<!-- About Section -->
-<div class="w3-content w3-justify w3-text-grey w3-padding-36" id="about">
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Basque<span style="font-family: 'Playball'">FX</span></h1>
+                        <p class="intro-text">Forex Trading Journal, Blog, & Analysis</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <h2 class="w3-text-light-grey">About</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>BasqueFX serves several purposes. The first is to gain experience with python. This site was built using Django and a postgres database. I plan to add other features to this site. It really all depends on what I decide to learn next. BasqueFx is essentially a place for me to display my python projects. The second is that I want a place to store and display thoughts on the forex markets. 
-    </p>
-    <p>I have a Masters Degree in Economics so naturally I find the forex markets interesting. Specifically fundamental analysis. I find technical trading to be robotic and unsatisfying. I need to point out that I have very limited experience with forex trading. This is a place for me to store my ideas. If you happen to stumble across my site, please do not use anything I say in your trading. I'm not giving out trading advice, I'm just recording my thoughts.
-    </p>
-</div>
-<!-- About Section -->
-<div class="w3-content w3-justify w3-text-grey w3-padding-36" id="about">
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About This Site</h2>
+                <p>BasqueFX serves several purposes. The first is to gain experience with python. This site was built using Django and a postgres database. I plan to add other features to this site. It really all depends on what I decide to learn next. BasqueFx is essentially a place for me to display my python projects. The second is that I want a place to store and display thoughts on the forex markets.</p>
+                <p>I have a Masters Degree in Economics so naturally I find the forex markets interesting. Specifically fundamental analysis. I find technical trading to be robotic and unsatisfying. I need to point out that I have very limited experience with forex trading. This is a place for me to store my ideas. If you happen to stumble across my site, please do not use anything I say in your trading. I'm not giving out trading advice, I'm just recording my thoughts.</p>
+            </div>
+        </div>
+    </section>
 
-    <h2 class="w3-text-light-grey">Intro to Forex</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p> 
-    </p>
-    <p>
-    </p>
-</div>
-<!-- Contact ME Section -->
-<div class="w3-padding-36 w3-content w3-text-grey" id="contact">
-  <h2 class="w3-text-light-grey">Contact Me</h2>
-  <hr style="width:200px" class="w3-opacity">
+    <!-- Forex Section -->
+    <section id="forex" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>About Forex</h2>
+                    <p>Coming soon...</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="w3-section">
-    <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Austin, US</p>
-    <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> basquefx@gmail.com</p>
-    <p><i class="fa fa-twitter fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> <a href="https://twitter.com/basquefx" style="text-decoration: none;">BasqueFX</a></p>
-  </div><br>
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact</h2>
+                <p>Feel free to email me to provide some feedback on the blog, or the website, or to just say hello.</p>
+                <p><a href="mailto:basquefx@gmail.com">basquefx@gmail.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="twitter.com/basquefx" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/basqueinmyglory" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/basqueinmyglory/" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<!-- End Contact Section -->
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p></p>
+        </div>
+    </footer>
 
-<!-- END PAGE CONTENT -->
-</div>
+    <!-- jQuery -->
+    <script src="{% static 'forecasts/vendor/jquery/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'forecasts/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static 'forecasts/js/grayscale.min.js' %}"></script>
 
 </body>
+
 </html>
